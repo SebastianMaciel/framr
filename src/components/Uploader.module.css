@@ -1,0 +1,100 @@
+.dropzone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 70vh;
+  padding: clamp(2rem, 5vw, 4rem);
+  background: var(--yellow);
+  border: var(--line-w) solid var(--ink);
+  cursor: pointer;
+  gap: 2rem;
+  transition: background 0.1s ease;
+}
+
+.dropzone:hover {
+  background: var(--paper);
+}
+
+.dragging {
+  background: var(--ink);
+}
+
+.dragging .kicker,
+.dragging .headline,
+.dragging .cta,
+.dragging .specs {
+  color: var(--yellow);
+}
+
+.input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(4rem, 16vw, 14rem);
+  line-height: 0.82;
+  letter-spacing: -0.06em;
+  color: var(--ink);
+  text-align: left;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.ctaArrow {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--ink);
+  color: var(--yellow);
+  border: var(--line-w) solid var(--ink);
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: calc(2.5rem - 2 * var(--line-w));
+}
+
+.specs {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+.error {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--magenta);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 0.75rem;
+  border: var(--line-w) solid var(--ink);
+}
