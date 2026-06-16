@@ -54,7 +54,7 @@ export default function WalkthroughES() {
           </ol>
         </nav>
 
-        <main>
+        <main id="content">
           <section id="vista" className="wk-section">
             <h2 className="s">01 / Vista de pájaro</h2>
             <p>

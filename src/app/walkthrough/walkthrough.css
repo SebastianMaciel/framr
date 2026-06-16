@@ -249,6 +249,11 @@
 .wk-code pre code {
   font-family: inherit;
 }
+/* Bump shiki "comment" color (default #6a737d ~ 3:1 vs bg) to pass WCAG AA */
+.wk-code pre [style*="color:#6A737D"],
+.wk-code pre [style*="color:#6a737d"] {
+  color: #8b949e !important;
+}
 
 /* CALLOUTS */
 .wk-note,
@@ -344,4 +349,6 @@
 }
 .wk-bottom a {
   color: var(--wk-yellow);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
